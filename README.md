@@ -6,3 +6,4 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | Name | Progress | 
 |----------|----------|
 | [Meow](./hackTheBox/startingPoint/meow.md) | Solved |
+| [Fawn](./hackTheBox/startingPoint/fawn.md) | Solved |
