@@ -9,3 +9,4 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | [Fawn](./hackTheBox/startingPoint/fawn.md) | Solved |
 | [Dancing](./hackTheBox/startingPoint/dancing.md) | Solved |
 | [Redeemer](./hackTheBox/startingPoint/redeemer.md) | Solved |
+| [Appointment](./hackTheBox/startingPoint/appointment.md) | Solved |
