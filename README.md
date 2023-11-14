@@ -10,4 +10,4 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | [Dancing](./hackTheBox/startingPoint/dancing.md) | Solved |
 | [Redeemer](./hackTheBox/startingPoint/redeemer.md) | Solved |
 | [Appointment](./hackTheBox/startingPoint/appointment.md) | Solved |
-| [Sequel]() | In Progress |
+| [Sequel](./hackTheBox/startingPoint/sequel.md) | Solved |
