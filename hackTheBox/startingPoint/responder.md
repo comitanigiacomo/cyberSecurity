@@ -36,9 +36,12 @@ the name of the URL parameter to do so, is `page`
 
 <span style="color:cyan">**Question 4**</span>: Which of the following values for the `page` parameter would be an example of exploiting a Local File Include (LFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
 
+    ../../../../../../../../windows/system32/drivers/etc/hosts
+
 
 <span style="color:cyan">**Question 5**</span>: Which of the following values for the `page` parameter would be an example of exploiting a Remote File Include (RFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
 
+    //10.10.14.6/somefile
 
 <span style="color:cyan">**Question 6**</span>: What does NTLM stand for?
 
@@ -59,6 +62,8 @@ In the Responder utility, the -I flag is used to specify the network interface.
     John the ripper
 
 <span style="color:cyan">**Question 9**</span>: What is the password for the administrator user?
+
+
 
   
 
