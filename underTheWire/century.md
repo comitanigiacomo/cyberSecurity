@@ -2,13 +2,14 @@
 
 The goal of this level is to log into the game
 
-Symply register via ssh to century.underthewire.tech whith `century1` as username and `century1` as password
+Simply register via SSH at `century.underthewire.tech` with the username `century1` and the password `century1`
 
 ```
 cmd : ssh century1@century.underthewire.tech
 
 cmd : century1
 ```
+Upon successful login, you will encounter the PowerShell prompt:
 
 ```
 Windows PowerShell 
@@ -21,7 +22,7 @@ PS C:\users\century1\desktop>
 
 The password for Century2 is the build version of the instance of PowerShell installed on this system.
 
-Searching online i found that the command `$PSVersionTable` prints a bunch of informations about the PowerShell version I am actually using.
+Upon searching online, I found that the command `$PSVersionTable` prints various information about the PowerShell version in use.
 
 ```
 cmd : $PSVersionTable
@@ -38,11 +39,11 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 
 ```
-Here I can see the build version of the PowerShell: 
+Here, I can see the build version of PowerShell: 
 
     10.0.14393.5582
 
-I can now go on to level 2:
+Now, let's proceed to Level 2:
 
 ```
 cmd : ssh century2@century.underthewire.tech
@@ -53,7 +54,7 @@ cmd : 10.0.14393.5582
 
 The password for Century3 is the name of the built-in cmdlet that performs the wget like function within PowerShell PLUS the name of the file on the desktop.
 
-Firstly i wanna know the name of the file on the desktop.
+Firstly, let's identify the name of the file on the desktop.
 
 ```
 cmd : ls
@@ -62,9 +63,7 @@ Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----  
 -a----        8/30/2018   3:29 AM            693 443
 ```
-So the name of the file is `443`
-
-After that, searching online i found that the command `Invoke-RestMethod` is the cmdlet that performs the wget like function within PowerShell. Now i have the password for level 3:
+The file name is `443`. After some online research, I found that the command `Invoke-RestMethod` is the cmdlet that performs the `wget`-like function within PowerShell. Now, I have the password for Level 3:
 
     invoke-webrequest443
 
@@ -72,7 +71,7 @@ After that, searching online i found that the command `Invoke-RestMethod` is the
 
 The password for Century4 is the number of files on the desktop.
 
-I firstly tried by simple run the `ls` command 
+Initially, I tried running the `ls` command:
 
 ```
 cmd : ls
@@ -86,11 +85,8 @@ cmd : ls
 .
 .
 ```
-i don't wanna count by hand all of the file
+This displayed multiple files. Instead of manually counting, I found the necessary commands online. The combination of `Get-ChildItem` and `Measure-Object` allows us to count the number of files in a directory.
 
-So I searched online and i found the commands i need
-
-The `Get-ChildItem` command retrieve objects (files and directories) in a specified location, while `Measure-Object` measure or calculate statistics on the objects sent to it. So by using a combination of those commands i can count the number of file in a directory
 ```
 cmd : Get-ChildItem | Measure-Object
 
@@ -101,7 +97,7 @@ Maximum  :
 Minimum  :                                                                               
 Property :
 ```
-So the numer of files on the desktop is 123
+So, the number of files on the desktop is 123.
 
      123
 
@@ -109,7 +105,7 @@ So the numer of files on the desktop is 123
 
 The password for Century5 is the name of the file within a directory on the desktop that has spaces in its name.
 
-At first i wanna see the name of the directories on desktop
+Firstly, let's see the names of the directories on the desktop.
 
 ```
 cmd : ls
@@ -124,9 +120,9 @@ d-----         2/8/2022  10:35 PM                Open.txt
 -a----        1/17/2023   3:35 PM              0 text                                  
 -a----        1/17/2023   3:35 PM              0 text.txt
 ```
-Now i only have to open the directory `can you open me`
+Now, i only have to open the directory `can you open me`
 
-By using the tab key to autocomplete the `cd` command, i am able to access the directory
+By using the tab key to autocomplete the `cd` command, I'm able to access the directory
 
 ```
 cmd : cd '.\Can you open me'
@@ -148,7 +144,7 @@ I have the password for the next level
 
 The password for Century6 is the short name of the domain in which this system resides in PLUS the name of the file on the desktop.
 
-As usually i have to descover the nae of the file on the desktop
+To discover the name of the file on the desktop:
 
 ```
 cmd : ls
@@ -158,8 +154,7 @@ Mode                LastWriteTime         Length Name
 -a----        8/30/2018   3:29 AM             54 3347   
 ```
 
-Now i need the name of the domain, that i can get running `Get-AdDomainController`
-
+The file name is `3347`. Now, let's find the name of the domain using `Get-AdDomainController`:
 ```
 cmd : Get-AdDomainController
 
@@ -168,7 +163,7 @@ DefaultPartition           : DC=underthewire,DC=tech
 Domain                     : underthewire.tech
 ```
 
-I now have thepassword for the next level
+The domain name is `underthewire.tech`. Thus, the password for the next level is:
 
     underthewire3347
 
@@ -176,7 +171,7 @@ I now have thepassword for the next level
 
 The password for Century7 is the number of folders on the desktop.
 
-I can use the same command used before on level 3
+The same command used in Level 3 can be used here:
 
 ```
 cmd : Get-ChildItem | Measure-Object
@@ -189,7 +184,7 @@ Minimum  :
 Property :
 ```
 
-Easy :)
+Easy! The number of folders is `197`.
 
     197
 
@@ -197,9 +192,8 @@ Easy :)
 
 The password for Century8 is in a readme file somewhere within the contacts, desktop, documents, downloads, favorites, music, or videos folder in the user’s profile.
 
-At first, i tried runing the command `Get-ChildItem ..\ -Recurse -File -Filter readme* ` to do a recursive search to find the file baing the research on the name of th file 
-
-Upon all the output, i found it 
+Firstly, I tried running the command `Get-ChildItem ..\ -Recurse -File -Filter readme*` to perform a recursive search for files with "readme" in their name.
+From the output, I identified the file `Readme.txt`.
 
 ```
 cmd : Get-ChildItem ..\ -Recurse -File -Filter readme* 
@@ -219,7 +213,7 @@ cmd : cat .\Readme.txt
 7points
 ```
 
-i have the password for the next level
+I have the password for the next level
 
     7points
 
@@ -251,13 +245,14 @@ Found it !
 
 The password for Century10 is the 161st word within the file on the desktop.
 
-I firstly used `Get-Content` to obtain the file content as a single strng. Then i divide it in an array of word using `.Split`. In the end i searched for the right word, remembering that indexes start from 0
+I'll use `Get-Content` to obtain the file content as a single string. Then, I'll split it into an array of words using `.Split()` and retrieve the 161st word.
 
 ```
 cmd : (Get-Content .\Word_File.txt -Raw).Split()[160]
 
 pierid
 ```
+The word is `pierid`.
 
     pierid
 
@@ -265,7 +260,7 @@ pierid
 
 The password for Century11 is the 10th and 8th word of the Windows Update service description combined PLUS the name of the file on the desktop.
 
-Usual commands to find the name of the file on the desktop
+Firstly, let's find the name of the file on the desktop
 
 ```
 Mode                LastWriteTime         Length Name                                     
@@ -273,8 +268,127 @@ Mode                LastWriteTime         Length Name
 -a----        8/30/2018   3:34 AM             43 110  
 ```
 
+The file name is `110`. Now, let's find the Windows Update service description:
 
 
+I know that WMI provides information about the operating system and hardware of the machine. I'm also aware that in WMI, there is a class that represents Windows services: Win32_Service. Finally, searching online, I found that the Windows Update process has the name wuauserv.
 
+Now that I want the description of the service, I only have to combine this information into a command:
+
+```
+cmd : Get-WmiObject -Query "SELECT * FROM Win32_Service WHERE Name = 'wuauserv'" | Select-Object -ExpandProperty Description
+
+Enables the detection, download, and installation of updates for Windows and other programs. If this service is disabl
+ed, users of this computer will not be able to use Windows Update or its automatic updating feature, and programs will
+ not be able to use the Windows Update Agent (WUA) API.
+```
+
+I found the password for the next level!
+
+    windowsupdates110
+
+<h2><span style="color:cyan">Level 11</span></h2>
+
+The password for Century12 is the name of the hidden file within the contacts, desktop, documents, downloads, favorites, music, or videos folder in the user’s profile.
+
+I'll perform a recursive search to find all hidden files (those starting with a dot).
+
+```
+cmd : Get-ChildItem -Path . -Recurse -File -Filter . -Force
+
+Directory: C:\users\century11\Downloads                                                                                                       
+Mode                LastWriteTime         Length Name                 ----                -------------         ------ ----               
+--rh--        8/30/2018   3:34 AM             30 secret_sauce   
+```
+Upon reviewing all the results, this name caught my attention. So, I tried it, and I obtained access to the next level.
+
+    secret_sauce
+
+<h2><span style="color:cyan">Level 12</span></h2>
+
+The password for Century13 is the description of the computer designated as a Domain Controller within this domain PLUS the name of the file on the desktop.
+
+First, let's find the name of the file on the desktop:
+
+```
+cmd : ls
+
+Mode                LastWriteTime         Length Name             
+----                -------------         ------ ----  
+-a----        8/30/2018   3:34 AM             30 _things 
+```
+The file name is `_things`. Now, let's find the description of the Domain Controller
+
+I firstly tried running `Get-ADDomainController` to have informations about the domain controller, but i noted that there wasn't a description.
+
+```
+cmd : Get-ADDomainController
+
+ComputerObjectDN           : CN=UTW,OU=Domain Controllers,DC=underthewire,DC=tech
+DefaultPartition           : DC=underthewire,DC=tech
+Domain                     : underthewire.tech
+Enabled                    : True
+Forest                     : underthewire.tech
+HostName                   : utw.underthewire.tech
+InvocationId               : 09ee1897-2210-4ac9-989d-e19b4241e9c6
+IPv4Address                : 192.99.167.156
+IPv6Address                : 
+IsGlobalCatalog            : True
+IsReadOnly                 : False
+LdapPort                   : 389
+Name                       : UTW
+```
+
+So, I searched online and found that the command `Get-ADComputer` was similar. After reading the manual, I discovered that it accepts the name of the computer as input. So, I tried running the command `Get-ADComputer UTW -Properties Description`:
+
+```
+cmd : Get-ADComputer UTW -Properties Description   
+
+Description       : i_authenticate
+DistinguishedName : CN=UTW,OU=Domain Controllers,DC=underthewire,DC=tech
+DNSHostName       : utw.underthewire.tech
+Enabled           : True
+Name              : UTW
+ObjectClass       : computer
+ObjectGUID        : 5ca56844-bb73-4234-ac85-eed2d0d01a2e
+SamAccountName    : UTW$
+SID               : S-1-5-21-758131494-606461608-3556270690-1000
+UserPrincipalName :
+```
+
+Now i have the password
+
+    i_authenticate_things
+
+<h2><span style="color:cyan">Level 13</span></h2>
+
+The password for Century14 is the number of words within the file on the desktop.
+
+I'll reuse the command from Level 9:
+
+```
+cmd : ((Get-Content .\countmywords -Raw).Split()).count
+
+755
+```
+That's great!
+
+    755
+
+<h2><span style="color:cyan">Level 14</span></h2>
+
+The password for Century15 is the number of times the word “polo” appears within the file on the desktop
+
+I'll apply what I learned from previous challenges:
+
+```
+cmd :  ((get-content ./countpolos) -split ' ' | select-string -Pattern \bpolo\b).count
+
+153
+```
+
+The final password is `153` ;)
+
+    153
 
 
