@@ -76,7 +76,8 @@ Initially, I tried running the `ls` command:
 ```
 cmd : ls
 
--a----        8/30/2018   3:29 AM             33 countme123                           -a----        8/30/2018   3:29 AM             33 countme1244
+-a----        8/30/2018   3:29 AM             33 countme1244
+-a----        8/30/2018   3:29 AM             33 countme123
 -a----        8/30/2018   3:29 AM             33 countme1245
 -a----        8/30/2018   3:29 AM             33 countme125
 -a----        8/30/2018   3:29 AM             33 countme1261
@@ -198,9 +199,10 @@ From the output, I identified the file `Readme.txt`.
 ```
 cmd : Get-ChildItem ..\ -Recurse -File -Filter readme* 
 
-  Directory: C:\users\century7\Downloads                                                                                                                                    
+  Directory: C:\users\century7\Downloads
+
 Mode                LastWriteTime         Length Name                                 
-----                -------------         ------ ----                                  
+----                -------------         ------ ----           
 -a----        8/30/2018   3:29 AM              7 Readme.txt   
 ```
 Now i only have to cat the file
@@ -296,8 +298,10 @@ I'll perform a recursive search to find all hidden files (those starting with a 
 ```
 cmd : Get-ChildItem -Path . -Recurse -File -Filter . -Force
 
-Directory: C:\users\century11\Downloads                                                                                                       
-Mode                LastWriteTime         Length Name                 ----                -------------         ------ ----               
+Directory: C:\users\century11\Downloads              
+
+Mode                LastWriteTime         Length Name                
+----                -------------         ------ ----               
 --rh--        8/30/2018   3:34 AM             30 secret_sauce   
 ```
 Upon reviewing all the results, this name caught my attention. So, I tried it, and I obtained access to the next level.
