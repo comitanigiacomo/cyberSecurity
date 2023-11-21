@@ -23,7 +23,7 @@ In this repo I will gradually include exercises that I do in my free time in ord
 
 # <h3><span style="color:cyan; font-size:20px;">picoCTF - picoGym</span></h3>
 
-<span style="color:cyan; font-size:20px;">picoGym</span>
+<span style="color:cyan; font-size:20px;">General Skills</span>
 
 | Name | Progress | 
 |----------|----------|
