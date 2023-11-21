@@ -12,7 +12,7 @@ cmd : ll
 
 Rimedio con `chmod +x`, e lo runno, ottenendo il seguente output:
 
-`Hello user! Pass me a -h to learn what I can do!`
+    Hello user! Pass me a -h to learn what I can do!
 
 La mia prima idea è stata quella di passsargli il carattere `-h` da stdin mediante pipe, con iil comando `echo -h | ./warm` ma non funziona.
 
