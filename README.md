@@ -27,5 +27,5 @@ In this repo I will gradually include exercises that I do in my free time in ord
 
 | Name | Progress | 
 |----------|----------|
-| [Python Wrangling]() | In Progress |
+| [Python Wrangling](./picoGym/generalSkills/pythonWrangling/solution.md) | Solved |
 
