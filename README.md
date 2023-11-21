@@ -28,4 +28,5 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | Name | Progress | 
 |----------|----------|
 | [Python Wrangling](./picoGym/generalSkills/pythonWrangling/solution.md) | Solved |
+| [Wave a Flag](./picoGym/generalSkills/waveAFlag/solution.md) | Solved |
 
