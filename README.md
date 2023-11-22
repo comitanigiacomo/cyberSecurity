@@ -29,4 +29,5 @@ In this repo I will gradually include exercises that I do in my free time in ord
 |----------|----------|
 | [Python Wrangling](./picoGym/generalSkills/pythonWrangling/solution.md) | Solved |
 | [Wave a Flag](./picoGym/generalSkills/waveAFlag/solution.md) | Solved |
+| [Nice Netcat](./picoGym/generalSkills/niceNetcat/solution.md) | Solved |
 
