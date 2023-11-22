@@ -32,4 +32,4 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | [Nice Netcat](./picoGym/generalSkills/niceNetcat/solution.md) | Solved |
 | [Static Ain't AlwaysNoise](./picoGym/generalSkills/staticAin'tAlwaysNoise/solution.md) | Solved |
 | [Tab Tab Attack](./picoGym/generalSkills/tabTabAttack/solution.md) | Solved |
-
+| [Magikarp Ground Mission](./picoGym/generalSkills/MagikarpGroundission/solution.md) | Solved |
