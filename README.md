@@ -33,3 +33,10 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | [Static Ain't AlwaysNoise](./picoGym/generalSkills/staticAin'tAlwaysNoise/solution.md) | Solved |
 | [Tab Tab Attack](./picoGym/generalSkills/tabTabAttack/solution.md) | Solved |
 | [Magikarp Ground Mission](./picoGym/generalSkills/MagikarpGroundission/solution.md) | Solved |
+
+
+<span style="color:cyan; font-size:20px;">Web Exploitation</span>
+
+ Name | Progress | 
+|----------|----------|
+| [Scavenger Hunt](./picoGym/webExploitation/scavengerHunt.md) | Solved |
