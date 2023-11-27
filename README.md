@@ -41,3 +41,14 @@ In this repo I will gradually include exercises that I do in my free time in ord
 |----------|----------|
 | [Scavenger Hunt](./picoGym/webExploitation/scavengerHunt/scavengerHunt.md) | Solved |
 |[Where Are The Robots](./picoGym/webExploitation/whereAreTheRobots/whereAretheRobots.md) | Solved |
+
+# <h3><span style="color:cyan; font-size:20px;">247ctf</span></h3>
+
+<span style="color:cyan; font-size:20px;">Miscellaneous</span>
+
+| Name | Progress | 
+|----------|----------|
+| [The Jail Text Editor]() | In Progress |
+
+
+
