@@ -49,7 +49,7 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | Name | Progress | 
 |----------|----------|
 | [The Jail Text Editor](./247ctf/miscellaneous/theJailTexteditor.md) | Solved |
-| [An Impossible Number]() | In Progress | 
+| [An Impossible Number](./247ctf/miscellaneous/anImpossibleNumber.md) |Solved| 
 
 
 
