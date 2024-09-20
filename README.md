@@ -12,7 +12,7 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | [Appointment](./hackTheBox/startingPoint/appointment.md) | Solved |
 | [Sequel](./hackTheBox/startingPoint/sequel.md) | Solved |
 | [Crocodile](./hackTheBox/startingPoint/crocodile.md) | Solved |
-| [Responder](./hackTheBox/startingPoint/responder.md) | In Progress |
+| [Responder](./hackTheBox/startingPoint/responder.md) | Solved |
 | [Three](./hackTheBox/startingPoint/three.md) | In Progress |
 
 # <h3><span style="color:cyan; font-size:20px;">Under The Wire</span></h3>
