@@ -55,9 +55,13 @@ In this repo I will gradually include exercises that I do in my free time in ord
 <hr/>
 <h2 align="left" style="color:#00bcd4;">🔐 pwn.college Progress</h2>
 <div align="left" style="margin-bottom:10px;">
+
   <strong style="font-size:1.2em;">👤 GiacomoComitani</strong><br/>
+
   🌍 <em>IT</em> &nbsp;|&nbsp; 🏅 <strong>Badges:</strong> 🐧<br/>
+
   <img src="https://pwn.college/belt/white.svg" alt="Belt" width="90" style="margin-top:5px;"/>
+
 </div>
 
 <table>
@@ -98,6 +102,8 @@ In this repo I will gradually include exercises that I do in my free time in ord
 </table>
 <hr/>
 <!-- PWN_END -->
+
+
 
 
 
