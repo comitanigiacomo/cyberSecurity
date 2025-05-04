@@ -51,5 +51,56 @@ In this repo I will gradually include exercises that I do in my free time in ord
 | [The Jail Text Editor](./247ctf/miscellaneous/theJailTexteditor.md) | Solved |
 | [An Impossible Number](./247ctf/miscellaneous/anImpossibleNumber.md) |Solved| 
 
+<!-- PWN_START -->
+<hr/>
+<h2 align="left" style="color:#00bcd4;">🔐 pwn.college Progress</h2>
+<div align="left" style="margin-bottom:10px;">
+  <strong style="font-size:1.2em;">👤 GiacomoComitani</strong><br/>
+  🌍 <em>IT</em> &nbsp;|&nbsp; 🏅 <strong>Badges:</strong> 🐧<br/>
+  <img src="https://pwn.college/belt/white.svg" alt="Belt" width="90" style="margin-top:5px;"/>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">📘 Module</th>
+      <th align="center">📈 Progress</th>
+      <th align="center">🏅 Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://pwn.college/intro-to-cybersecurity/">Intro to Cybersecurity</a></td>
+      <td align="center">2 / 181</td>
+      <td align="center">10968 / 11791</td>
+    </tr>
+    <tr>
+      <td><a href="https://pwn.college/welcome/">Getting Started</a></td>
+      <td align="center">10 / 10</td>
+      <td align="center">8800 / 20615</td>
+    </tr>
+    <tr>
+      <td><a href="https://pwn.college/linux-luminarium/">Linux Luminarium</a></td>
+      <td align="center">84 / 84</td>
+      <td align="center">4114 / 13774</td>
+    </tr>
+    <tr>
+      <td><a href="https://pwn.college/computing-101/">Computing 101</a></td>
+      <td align="center">12 / 69</td>
+      <td align="center">10174 / 13239</td>
+    </tr>
+    <tr>
+      <td><a href="https://pwn.college/fundamentals/">Playing With Programs</a></td>
+      <td align="center">70 / 255</td>
+      <td align="center">3940 / 19679</td>
+    </tr>
+  </tbody>
+</table>
+<hr/>
+<!-- PWN_END -->
+
+
+
+
 
 
