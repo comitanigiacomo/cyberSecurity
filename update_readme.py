@@ -15,7 +15,7 @@ def formatta_pwncollege_section(data):
         '<div align="left" style="margin-bottom:10px;">\n\n'
         f'  <strong style="font-size:1.2em;">👤 {nome}</strong><br/>\n\n'
         f'  🌍 <em>{paese}</em> &nbsp;|&nbsp; 🏅 <strong>Badges:</strong> {badge}<br/>\n\n'
-        f'  <img src="{cintura_url}" alt="Belt" width="90" style="margin-top:5px;"/>\n\n'
+        f'  <img src="{cintura_url}" alt="Belt" width="90" style="margin-top:5px;"/>\n\n\n'
         '</div>\n\n'
         '<table>\n'
         '  <thead>\n'
