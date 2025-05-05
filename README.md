@@ -77,32 +77,34 @@ In this repo I will gradually include exercises that I do in my free time in ord
     <tr>
       <td><a href="https://pwn.college/intro-to-cybersecurity/">Intro to Cybersecurity</a></td>
       <td align="center">2 / 181</td>
-      <td align="center">10968 / 11791</td>
+      <td align="center">10976 / 11799</td>
     </tr>
     <tr>
       <td><a href="https://pwn.college/welcome/">Getting Started</a></td>
       <td align="center">10 / 10</td>
-      <td align="center">8800 / 20615</td>
+      <td align="center">8800 / 20660</td>
     </tr>
     <tr>
       <td><a href="https://pwn.college/linux-luminarium/">Linux Luminarium</a></td>
       <td align="center">84 / 84</td>
-      <td align="center">4114 / 13774</td>
+      <td align="center">4114 / 13807</td>
     </tr>
     <tr>
       <td><a href="https://pwn.college/computing-101/">Computing 101</a></td>
       <td align="center">12 / 69</td>
-      <td align="center">10174 / 13239</td>
+      <td align="center">10180 / 13259</td>
     </tr>
     <tr>
       <td><a href="https://pwn.college/fundamentals/">Playing With Programs</a></td>
       <td align="center">70 / 255</td>
-      <td align="center">3940 / 19679</td>
+      <td align="center">3944 / 19684</td>
     </tr>
   </tbody>
 </table>
 <hr/>
 <!-- PWN_END -->
+
+
 
 
 
