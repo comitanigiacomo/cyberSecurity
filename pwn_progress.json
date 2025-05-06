@@ -10,31 +10,31 @@
             "link": "https://pwn.college/intro-to-cybersecurity/",
             "titolo": "Intro to Cybersecurity",
             "challenge": "2 / 181",
-            "rank": "10979 / 11806"
+            "rank": "10990 / 11820"
         },
         {
             "link": "https://pwn.college/welcome/",
             "titolo": "Getting Started",
             "challenge": "10 / 10",
-            "rank": "8800 / 20685"
+            "rank": "8800 / 20725"
         },
         {
             "link": "https://pwn.college/linux-luminarium/",
             "titolo": "Linux Luminarium",
             "challenge": "84 / 84",
-            "rank": "4114 / 13826"
+            "rank": "4114 / 13856"
         },
         {
             "link": "https://pwn.college/computing-101/",
             "titolo": "Computing 101",
-            "challenge": "48 / 69",
-            "rank": "3036 / 13270"
+            "challenge": "58 / 69",
+            "rank": "1430 / 13294"
         },
         {
             "link": "https://pwn.college/fundamentals/",
             "titolo": "Playing With Programs",
             "challenge": "70 / 255",
-            "rank": "3945 / 19688"
+            "rank": "3947 / 19693"
         }
     ],
     "cintura": "Dojos"
